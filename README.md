@@ -3,7 +3,7 @@ Helpful guidance for installing and using HNN-Core on the OSCAR supercomputer
 
 # Step 1: Download this repository
 
-For any newer students joining the lab who want or need to use HNN-Core on the OSCAR supercomputingn environment, this repository should have everything they need to get started. The first step is to download this 'repository'. The easiest way to download this (probably) is to, from a Terminal on Oscar, run 
+For any newer students joining the lab who want or need to use HNN-Core on the OSCAR supercomputing environment, this repository should have everything they need to get started. The first step is to download this 'repository'. The easiest way to download this (probably) is to, from a Terminal on Oscar, run 
 
 ```
 git clone https://github.com/jonescompneurolab/oscar-install
