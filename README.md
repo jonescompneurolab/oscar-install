@@ -17,7 +17,7 @@ For the general (non-`PFC_new`) HNN-Core installation, there are two easy-to-use
 
 1. `create-hnn-core-venv.sh`:
     - This is the only file needed to actually create the environment (called `hnn-core`), load the modules, and install the right packages.
-    - To actually perform the installation, all you need to do is execute this file. If you have used the `git clone...` command above, then all you need to do is the following two commands, and follow the single instruction that will appear:
+    - To actually perform the installation, all you need to do is execute this file. If you have used the `git clone...` command above, then all you need to do is run the following two commands, and press `y` in response to the prompt that appears:
 
 ```
 cd oscar-install
