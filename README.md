@@ -1,9 +1,14 @@
 # oscar-install
-Helpful guidance for installing and using HNN-Core on the OSCAR supercomputer
+
+For any newer students joining the lab who want or need to use HNN-Core on the OSCAR supercomputing environment, this repository should have everything they need to get started.
+
+# Step 0: Register for an OSCAR account
+
+First, go to this page on our lab's Notion to find out how to sign up for an OSCAR account: https://www.notion.so/jonescompneurolab/OSCAR-Guide-651fd55a117a41fc998b7c9a62f302b2 .
 
 # Step 1: Download this repository
 
-For any newer students joining the lab who want or need to use HNN-Core on the OSCAR supercomputing environment, this repository should have everything they need to get started. The first step is to download this 'repository'. The easiest way to download this is to, once you are inside an SSH session to Oscar (or, via a Desktop session using OpenOnDemand, open the program at the bottom that says "Terminal Emulator"), run the following command: 
+Next, login to OSCAR and, from OSCAR, download this 'repository'. The easiest way to download this is to, once you are inside an SSH session to Oscar (or, via a Desktop session using OpenOnDemand, open the program at the bottom that says "Terminal Emulator"), run the following command:
 
 ```
 git clone https://github.com/jonescompneurolab/oscar-install
