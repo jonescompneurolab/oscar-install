@@ -49,7 +49,7 @@ if [[ $pie == y ]]; then
     pip install mpi4py
 
     echo "--> Installing the latest pre-release of HNN-Core with parallel support..."
-    pip install --pre "hnn_core[parallel]"
+    pip install "hnn_core[gui,parallel]"
 
     echo "--> Finally, installing other helpful packages..."
     pip install bycycle jupyter mne pyvista
