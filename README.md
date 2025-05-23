@@ -86,7 +86,7 @@ This section is a work in progress.
 
 **Warning**: From the Oscar [OpenOnDemand portal](https://ood.ccv.brown.edu/pun/sys/dashboard/), do NOT use the Desktop session setting for "6 Cores, 15GB Memory, 4 days". Other settings appear fine, but there is something wrong with that setting that prevents HNN-Core from using all the cores available.
 
-### HNN-Core GUI:
+### HNN-Core GUI
 
 To use the the **HNN-Core GUI on Oscar** ([see example GUI tutorial here](https://dylansdaniels.github.io/website_redesign/content/05_erps/erps_in_gui.html)), the only current method is:
 
@@ -112,7 +112,7 @@ The easiest way to run Jupyter from inside either of our environments is the fol
 - The Jupyter Lab interface should then open in the browser inside your Desktop session after a few seconds. Get sciencing!
 - If you need to stop the server, you can go to the Terminal Emulator window, then press "Control + c" twice.
 
-If the latency (lag) of the Desktop app is too much for you, then you may get better results by changing the "Compression" and "Image Quality" sliders for the Desktop app, depending on your connection speed. If it is still too slow for your preference, then try using the the "Using a Batch Job" or "In an Interactive Session" sections of [Oscar's Jupyter docs here](https://docs.ccv.brown.edu/oscar/jupyter-notebooks/jupyter-notebooks-on-oscar-1). However, you will have to modify the instructions with the appropriate lines from the `oscar-install/activate-<environment>.sh` file that you use above. Ask Austin for help if you want to set this up, it's not intuitive.
+If the latency (lag) of the Desktop app is too much for you, then you may get better results by changing the "Compression" and "Image Quality" sliders for the Desktop app, depending on your connection speed. If it is still too slow for your preference, then try using the "Using a Batch Job" or "In an Interactive Session" sections of [Oscar's Jupyter docs here](https://docs.ccv.brown.edu/oscar/jupyter-notebooks/jupyter-notebooks-on-oscar-1). However, you will have to modify the instructions with the appropriate lines from the `oscar-install/activate-<environment>.sh` file that you use above. Ask Austin for help if you want to set this up, it's not intuitive.
 
 Unfortunately, the "Basic Jupyter Notebook with Anaconda" and "Jupyter Notebook for Python Environemnts" apps from [Oscar OpenOnDemand](https://ood.ccv.brown.edu/pun/sys/dashboard/) do *not* appear to work with our environments. This is currently being investigated.
 
@@ -124,7 +124,7 @@ If you want to test that NEURON can talk to MPI successfully (which HNN-Core nee
 source test-nrn-mpiexec.sh
 ```
 
-Which should spit out several lines saying "Hello from proc <number>".
+Which should spit out several lines saying "Hello from proc" and then a number.
 
 If you want to test that HNN-Core `MPIBackend` support works in your environment, first get an allocation with multiple cores, then execute this file also included in this repo:
 
