@@ -31,7 +31,7 @@ Make sure you use a passphrase, and make sure to write it down. When you run fut
 
 # Step 3: Download this repository
 
-Now that you've setup Github access from inside Oscar, you need to download the scripts in this repository. Run the following command, which will move to your "home" directory and create a folder named `oscar-install` there. If you want, you can download the repository anywhere, but it is recommended to put it in your home directory for reasons we'll seen soon
+Now that you've setup Github access from inside Oscar, you need to download the scripts in this repository. Run the following command, which will move to your "home" directory and create a folder named `oscar-install` there. If you want, you can download the repository anywhere, but it is recommended to put it in your home directory for reasons we'll see soon.
 
 ```
 cd ~
@@ -59,6 +59,8 @@ source ~/oscar-install/activate-hnn-core-conda-env.sh
 ```
 
 You can run that command from anywhere, and it will give you access to the environment in whatever command line you're using (SSH, Desktop app Terminal Emulator, etc.). Note that the above assumes you downloaded `oscar-install` into your home directory like in the previous step; if you downloaded it to a different location, then you need to update the path to the script accordingly.
+
+To leave the environment, run `conda deactivate`, or simply close the window/SSH session you are using.
 
 If you ever need to rebuild your environment, then you can delete the current one by activating the environment, running `conda deactivate`, then `conda env remove -n hnn-core-conda-env`, then starting this step over again.
 
