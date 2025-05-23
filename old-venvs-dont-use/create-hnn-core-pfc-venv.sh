@@ -1,7 +1,7 @@
 #!/bin/bash
 # Last updated: December 2024
 
-VENV_NAME=hnn-core
+VENV_NAME=hnn-core-pfc
 VENVS_LOCN=$HOME/venvs
 
 echo $'\n--> This will create a Python virtual environment with HNN installed for you called:'
@@ -46,13 +46,13 @@ if [[ $pie == y ]]; then
     pip install --upgrade pip
 
     echo "--> Installing mpi4py..."
-    pip install mpi4py
+    pip install --no-cache-dir mpi4py
 
-    echo "--> Installing the latest pre-release of HNN-Core with parallel support..."
-    pip install "hnn_core[gui,parallel]"
+    echo "--> Installing Darcy's custom PFC_new branch of HNN-Core with parallel support..."
+    pip install "hnn_core[parallel] @ https://api.github.com/repos/darcywaller/hnn-core/zipball/PFC_new"
 
     echo "--> Finally, installing other helpful packages..."
-    pip install bycycle jupyter mne pyvista
+    pip install bycycle jupyterlab mne pyvista
 
     echo "--> DONE: Environment successfully created!"
     echo ""

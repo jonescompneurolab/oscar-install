@@ -1,7 +1,7 @@
 #!/bin/bash
 # Last updated: December 2024
 
-VENV_NAME=hnn-core-pfc
+VENV_NAME=hnn-core-venv
 VENVS_LOCN=$HOME/venvs
 
 echo $'\n--> This will create a Python virtual environment with HNN installed for you called:'
@@ -42,17 +42,17 @@ if [[ $pie == y ]]; then
     echo "--> Entering $VENV_NAME ..."
     source $VENVS_LOCN/$VENV_NAME/bin/activate
 
-    echo "--> Upgrading pip..."
-    pip install --upgrade pip
+    # echo "--> Upgrading pip..."
+    # pip install --upgrade pip
 
-    echo "--> Installing mpi4py..."
-    pip install mpi4py
+    echo "--> Installing mpi4py and building new wheel for it..."
+    pip install --no-cache-dir mpi4py
 
-    echo "--> Installing Darcy's custom PFC_new branch of HNN-Core with parallel support..."
-    pip install "hnn_core[parallel] @ https://api.github.com/repos/darcywaller/hnn-core/zipball/PFC_new"
+    echo "--> Installing the HNN-Core with GUI, optimization, and parallel support..."
+    pip install "hnn_core[gui,opt,parallel]"
 
     echo "--> Finally, installing other helpful packages..."
-    pip install bycycle jupyter mne pyvista
+    pip install bycycle jupyterlab mne pyvista
 
     echo "--> DONE: Environment successfully created!"
     echo ""
@@ -73,14 +73,14 @@ if [[ $pie == y ]]; then
     ever in a new Terminal or new session and want to load everything, you can
     'source' this file using the following command:"
     echo ""
-    echo "    source activate-$VENV_NAME-venv-modules.sh"
+    echo "    source activate-$VENV_NAME-modules.sh"
     echo ""
 
     echo "--> Similarly, if you want this convenience-script to be accessible
     anywhere, you can make a symlink to it by running the following command in
     this Terminal:"
     echo ""
-    echo "    ln -s "'$PWD'"/activate-$VENV_NAME-venv-modules.sh "'$HOME'"/bin"
+    echo "    ln -s "'$PWD'"/activate-$VENV_NAME-modules.sh "'$HOME'"/bin"
 
     echo ""
 
