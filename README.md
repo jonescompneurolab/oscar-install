@@ -29,6 +29,8 @@ ssh-keygen -t ed25519 -C "jane@example.com"
 
 Make sure you use a passphrase, and make sure to write it down. When you run future git commands that interact with Github (such as `git clone` or `git pull`), you will need to provide your passphrase.
 
+Once you have created your new SSH key, you need to add the *public* part of the key to Github using the Github website. The instructions can be found here: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. Essentially, you need to copy the text inside the file `~/.ssh/id_ed25519.pub` from your Oscar account into a "New SSH key" tied to your Github account. The "public" part of your key is in the file that ends in `.pub` e.g. `~/.ssh/id_ed25519.pub`, while the "private" part of your key is the file that has the same name except it has not file extension, e.g. `~/.ssh/id_ed25519`. You should upload the "public" part of your key, but not the "private" part.
+
 # Step 3: Download this repository
 
 Now that you've setup Github access from inside Oscar, you need to download the scripts in this repository. Run the following command, which will move to your "home" directory and create a folder named `oscar-install` there. If you want, you can download the repository anywhere, but it is recommended to put it in your home directory for reasons we'll see soon.
