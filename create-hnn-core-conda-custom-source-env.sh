@@ -30,7 +30,9 @@ pip install --no-cache-dir mpi4py
 # Install some jupyter stuff too
 pip install jupyterlab notebook
 
-git clone git@github.com:jtajchman/hnn_tms_direct hnn-core
+# THIS is where you need to customize the script so that it downloads your
+# personal fork.
+git clone git@github.com:YOUR_GITHUB_USERNAME/hnn-core hnn-core
 cd hnn-core
 
 # Finally, install HNN
