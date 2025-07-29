@@ -27,7 +27,5 @@ rm -f $CONDA_PREFIX/compiler_compat/ld
 
 # Install MPI Python compatilibity package we need, including building a custom wheel
 pip install --no-cache-dir mpi4py
-# Finally, install HNN
-pip install "hnn_core[parallel] @ https://api.github.com/repos/darcywaller/hnn-core/zipball/PFC_new"
-# Install some jupyter stuff
-pip install jupyterlab notebook
+# Finally, install Darcy's HNN along with some jupyter stuff
+pip install "hnn_core[parallel] @ https://api.github.com/repos/darcywaller/hnn-core/zipball/PFC_new" jupyterlab notebook
