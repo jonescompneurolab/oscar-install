@@ -29,3 +29,9 @@ rm -f $CONDA_PREFIX/compiler_compat/ld
 pip install --no-cache-dir mpi4py
 # Install some jupyter stuff too
 pip install jupyterlab notebook
+
+git clone git@github.com:jtajchman/hnn_tms_direct hnn-core
+cd hnn-core
+
+# Finally, install HNN
+pip install -e ".[gui,opt,parallel]"

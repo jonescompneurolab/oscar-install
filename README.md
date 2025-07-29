@@ -66,7 +66,12 @@ To leave the environment, run `conda deactivate`, or simply close the window/SSH
 
 If you ever need to rebuild your environment, then you can delete the current one by activating the environment, running `conda deactivate`, then `conda env remove -n hnn-core-conda-env`, then starting this step over again.
 
-# Step 5: Create the `hnn-core-conda-pfc-env` Miniconda virtual environment
+# Step 5: Create the `hnn-core-conda-custom-source-env` Miniconda virtual environment
+
+Note that you ONLY need to do this step if Darcy explicitly told you to.
+
+
+# Step 6: Create the `hnn-core-conda-pfc-env` Miniconda virtual environment
 
 Note that you ONLY need to do this step if Darcy explicitly told you to.
 
@@ -82,7 +87,7 @@ And run the following to re-activate it when you need to in the future.
 source ~/oscar-install/activate-hnn-core-conda-env.sh
 ```
 
-# Step 6: Using the environment(s)
+# Step 7: Using the environment(s)
 
 This section is a work in progress.
 
