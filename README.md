@@ -165,3 +165,64 @@ If the latency (lag) of the Desktop app is too much for you, then you may get be
 
 Unfortunately, the "Basic Jupyter Notebook with Anaconda" and "Jupyter Notebook for Python Environemnts" apps from [Oscar OpenOnDemand](https://ood.ccv.brown.edu/pun/sys/dashboard/) do *not* appear to work with our environments. This is currently being investigated.
 
+
+# Changelog: Transitioning after 2026-January OSCAR update
+
+Note: Getting HNN working on OSCAR after the 2026-January update is still in "beta" and in the process of testing. If you run into any problems, please let Austin know.
+
+### Transition Step 1. Enabling `ulimit` changes
+
+1. Start a new OoD Desktop session.
+2. Open the files in your Home directory using the file explorer.
+3. Go to "View" and make sure "Show Hidden Files" is checked.
+4. Open the file `.bash_profile` (note that it starts with a dot).
+5. Add the following line to the bottom of it:
+
+```
+ulimit -l unlimited
+```
+
+You can now close the file and the file explorer.
+
+### Transition Step 2. Download the latest scripts
+
+1. Now open a new Terminal window (don't use an existing one).
+2. Move to where you downloaded the `oscar-install` repo, which you can probably do with the command `cd ~/oscar-install`.
+3. Run `git stash` which will save any changes or customizations you have made into a "stash" that you can re-apply later (see https://www.atlassian.com/git/tutorials/saving-changes/git-stash for more details on that, Austin can also help you with that on request).
+4. Update your version of this repo by running `git pull origin`.
+
+### Transition Step 3. Clean your conda environments
+
+1. Run the following command to enable `conda` commands:
+```
+module load miniforge3
+```
+2. You can see your list of installed Conda environments using
+```
+conda env list
+```
+3. If you have any existing HNN conda environments from previous installations, you should delete them using the following:
+```
+conda env remove -n <name>
+```
+For example, if you have previously been using the Conda environment named `hnn-core-conda-env`, then you should delete this by running the following
+```
+conda env remove -n hnn-core-conda-env
+```
+This will take a few minutes.
+
+### Transition Step 4. Re-Create your Conda environments
+
+From here, you can follow the original installation guide above, starting with Step 5 where you create and activate your environments. For example, to make the updated `hnn-core-conda-env` environment, you can run the same commands that you ran originally. So, you could create this environment using
+
+```
+source create-hnn-core-conda-env.sh
+```
+
+And then re-activate the environment in the future.
+
+```
+source ~/oscar-install/activate-hnn-core-conda-env.sh
+```
+
+
