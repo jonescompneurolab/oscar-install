@@ -175,8 +175,8 @@ Note: Getting HNN working on OSCAR after the 2026-January update is still in "be
 1. Start a new OoD Desktop session.
 2. Open the files in your Home directory using the file explorer.
 3. Go to "View" and make sure "Show Hidden Files" is checked.
-4. Open the file `.bash_profile` (note that it starts with a dot).
-5. Add the following line to the bottom of it:
+4. Open the file `.bashrc` (note that it starts with a dot). If you don't have a file by that name, then create one (make sure to include the dot!).
+5. Add the following line to the bottom of that file:
 
 ```
 ulimit -l unlimited
